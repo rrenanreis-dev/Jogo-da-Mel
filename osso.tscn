@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://byxc4b2jbgqoh"]
+
+[ext_resource type="Texture2D" uid="uid://doyrm1vedgoyn" path="res://pixelated-dog-bone-icon-png.webp" id="1_6s74f"]
+[ext_resource type="Script" uid="uid://dmou3vdjk8eww" path="res://osso.gd" id="1_8n1s6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bhunq"]
+radius = 6.0
+height = 36.0
+
+[node name="Osso" type="Area2D" unique_id=1308351274]
+script = ExtResource("1_8n1s6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1683198723]
+position = Vector2(-1.0000038, -1.0000057)
+scale = Vector2(0.066836774, 0.053571492)
+texture = ExtResource("1_6s74f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1736344425]
+shape = SubResource("CapsuleShape2D_bhunq")

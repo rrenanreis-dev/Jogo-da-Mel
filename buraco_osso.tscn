@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bc5dnfyx3dy3v"]
+
+[ext_resource type="Script" uid="uid://8jby3pvsmukx" path="res://scripts/buraco_osso.gd" id="1_a10lu"]
+[ext_resource type="Texture2D" uid="uid://c4j6uo8ccxxao" path="res://escavar.webp" id="2_nwx28"]
+[ext_resource type="PackedScene" uid="uid://byxc4b2jbgqoh" path="res://osso.tscn" id="2_wr6u3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wr6u3"]
+radius = 25.0
+
+[node name="buraco_osso" type="Area2D" unique_id=1595561481]
+script = ExtResource("1_a10lu")
+cena_osso = ExtResource("2_wr6u3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1468780335]
+position = Vector2(0, -1)
+scale = Vector2(0.06887755, 0.054081604)
+texture = ExtResource("2_nwx28")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=3508450]
+position = Vector2(1, 3)
+shape = SubResource("CircleShape2D_wr6u3")

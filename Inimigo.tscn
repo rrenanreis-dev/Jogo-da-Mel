@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bhj41j8b3r81u"]
+
+[ext_resource type="Script" uid="uid://dxntrnjjj4oa8" path="res://scripts/inimigo.gd" id="1_3j1he"]
+[ext_resource type="Texture2D" uid="uid://b1c3e82bnkm6s" path="res://caranguejo.webp" id="1_b0upo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3j1he"]
+atlas = ExtResource("1_b0upo")
+region = Rect2(0, 0, 980, 980)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bhunq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3j1he")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sn0t7"]
+size = Vector2(3.5, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
+size = Vector2(55.5, 43.5)
+
+[node name="caranguejo" type="CharacterBody2D" unique_id=779491285 groups=["inimigos"]]
+script = ExtResource("1_3j1he")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=672525593]
+scale = Vector2(0.06632653, 0.06326531)
+sprite_frames = SubResource("SpriteFrames_bhunq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1565593135]
+shape = SubResource("RectangleShape2D_sn0t7")
+
+[node name="AreaDano" type="Area2D" parent="." unique_id=764102320]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDano" unique_id=1448871400]
+position = Vector2(-0.25, -2.25)
+shape = SubResource("RectangleShape2D_bhunq")
+debug_color = Color(0.9911035, 0, 0.27581844, 0.41960785)

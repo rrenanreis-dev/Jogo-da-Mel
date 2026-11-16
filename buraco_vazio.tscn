@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c7qgqr5gfekx4"]
+
+[ext_resource type="Script" uid="uid://cxyvjdumwcq46" path="res://scripts/buraco_vazio.gd" id="1_iglxo"]
+[ext_resource type="Texture2D" uid="uid://c4j6uo8ccxxao" path="res://escavar.webp" id="2_60hjk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ptffq"]
+radius = 25.0
+
+[node name="buraco_vazio" type="Area2D" unique_id=1903243004]
+script = ExtResource("1_iglxo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1613297633]
+position = Vector2(0, -1)
+scale = Vector2(0.06887755, 0.054081604)
+texture = ExtResource("2_60hjk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1228075214]
+position = Vector2(1, 3)
+shape = SubResource("CircleShape2D_ptffq")
